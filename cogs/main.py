@@ -1,8 +1,10 @@
-import discord
-from discord.ext import commands
+from nextcord.ext import commands
+from nextcord import File, ButtonStyle, Embed, Color, SelectOption, Intents, Interaction, SlashOption
+from nextcord.ui import Button, View, Select
 from discord_bot.core.classes import Cog_Extension
 
-intents = discord.Intents.default()
+intents = Intents.default()
+intents.message_content = True
 intents.members = True
 intents.typing = False
 intents.presences = False
